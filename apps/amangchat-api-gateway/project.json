@@ -1,0 +1,24 @@
+{
+  "name": "amangchat-api-gateway",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/amangchat-api-gateway/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "amangchat-api-gateway:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "amangchat-api-gateway:build:development"
+        },
+        "production": {
+          "buildTarget": "amangchat-api-gateway:build:production"
+        }
+      }
+    }
+  }
+}
