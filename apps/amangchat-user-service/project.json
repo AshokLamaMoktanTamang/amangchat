@@ -1,0 +1,24 @@
+{
+  "name": "amangchat-user-service",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/amangchat-user-service/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "amangchat-user-service:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "amangchat-user-service:build:development"
+        },
+        "production": {
+          "buildTarget": "amangchat-user-service:build:production"
+        }
+      }
+    }
+  }
+}

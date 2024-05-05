@@ -8,15 +8,14 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = app.get(ConfigService);
-
-  const port = config.get<number>('port.gateway') || 3001;
-
+  
+  const port = config.get<number>('port.chat') || 3003;
+    
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
   await app.listen(port);
-
   Logger.log(
-    `🚀 API Gateway is running on: http://localhost:${port}/${globalPrefix}`
+    `🚀 Chat Service is running on: http://localhost:${port}/${globalPrefix}`
   );
 }
 

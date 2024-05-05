@@ -9,15 +9,12 @@ async function bootstrap() {
 
   const config = app.get(ConfigService);
 
-  const port = config.get<number>('port.gateway') || 3001;
+  const port = config.get<number>('port.user') || 3002;
 
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
   await app.listen(port);
-
-  Logger.log(
-    `🚀 API Gateway is running on: http://localhost:${port}/${globalPrefix}`
-  );
+  Logger.log(`🚀 User Service is running on: http://localhost:${port}/`);
 }
 
 bootstrap();

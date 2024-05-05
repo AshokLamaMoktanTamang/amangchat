@@ -1,0 +1,23 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@protos/*": ["../../../libs/common/protobuf/*"],
+      "@models/*": ["../../../libs/common/src/models/*"],
+      "@baseRepository/*": ["../../../libs/common/src/repository/*"],
+      "@commonModule/*": ["../../../libs/common/src/*"]
+    }
+  }
+}
