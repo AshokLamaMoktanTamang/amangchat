@@ -15,7 +15,7 @@ async function bootstrap() {
   app.setGlobalPrefix(globalPrefix);
   await app.listen(port);
   Logger.log(
-    `🚀 Chat Service is running on: http://localhost:${port}/${globalPrefix}`
+    `🚀 Chat Service running http://localhost:${port}/${globalPrefix}`
   );
 }
 
